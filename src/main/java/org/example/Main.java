@@ -21,5 +21,10 @@ public class Main {
         graph.addEdge(vertex1, vertex4,4.1 );
 
         System.out.println(graph);
+
+        graph.removeEdge(vertex1, vertex2);
+        graph.removeEdge(vertex1, vertex4);
+        graph.removeEdge(vertex2, vertex3);
+        System.out.println(graph);
     }
 }
