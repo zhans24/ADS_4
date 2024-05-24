@@ -3,9 +3,20 @@ package org.example.Search;
 import org.example.Vertex;
 import org.example.WeightedGraph;
 
-public class Search {
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-    public Search( Vertex start){
+public abstract class Search<V> {
+    protected Set<Vertex<V>> isVisited;
+    protected Map<Vertex<V>,Vertex<V>> parentVertices;
 
+
+    public Search(Vertex<V> start){
+        this.isVisited=new HashSet<>();
+        this.parentVertices=new HashMap<>();
     }
+
+    public abstract Iterable<Vertex<V>> pathTo(Vertex<V> start);
 }
