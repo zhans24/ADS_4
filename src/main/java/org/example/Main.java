@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Map;
-import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,11 +18,7 @@ public class Main {
         graph.addEdge(vertex2, vertex3, 3.0);
         graph.addEdge(vertex1, vertex4,4.1 );
 
-        System.out.println(graph);
+        graph.dfs(vertex1);
 
-        graph.removeEdge(vertex1, vertex2);
-        graph.removeEdge(vertex1, vertex4);
-        graph.removeEdge(vertex2, vertex3);
-        System.out.println(graph);
     }
 }

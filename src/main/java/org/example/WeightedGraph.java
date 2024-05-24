@@ -1,6 +1,9 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 public class WeightedGraph<V> {
     private ArrayList<Vertex<V>> vertexList;
@@ -14,14 +17,46 @@ public class WeightedGraph<V> {
     }
 
     public void addEdge(Vertex<V> vertex1,Vertex<V> vertex2,Double weight){
-        vertex1.addEdge(vertex2, weight);
-        vertex2.addEdge(vertex1, weight);
+        chechVertex(vertex1);
+        chechVertex(vertex2);
+        vertex1.addAdjVertice(vertex2, weight);
+        vertex2.addAdjVertice(vertex1, weight);
+    }
+
+    public void chechVertex(Vertex<V> vertex){
+        if (!vertexList.contains(vertex))
+            throw new RuntimeException(vertex.getValue()+" <- this vertex doesn't exist");
     }
 
     public void removeEdge(Vertex<V> vertex1,Vertex<V> vertex2){
+        chechVertex(vertex1);
+        chechVertex(vertex2);
         vertex1.removeEdge(vertex2);
         vertex2.removeEdge(vertex1);
     }
+
+    public void dfs(Vertex<V> start){
+        Set<Vertex<V>> isVisited=new HashSet<>();
+        Stack<Vertex<V>> stack=new Stack<>();
+
+        isVisited.add(start);
+        stack.push(start);
+
+        while (!stack.empty()){
+            Vertex<V> curr=stack.pop();
+            System.out.print(curr.getValue()+"-> ");
+            for (Vertex<V> vertex:curr.getAdjVertices().keySet()) {
+                if (!isVisited.contains(vertex)) {
+                    isVisited.add(vertex);
+                    stack.push(vertex);
+                }
+            }
+        }
+
+    }
+
+
+
 
     @Override
     public String toString() {

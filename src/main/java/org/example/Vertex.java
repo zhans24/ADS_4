@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Vertex<V>{
     private V value;
@@ -12,13 +13,12 @@ public class Vertex<V>{
         this.adjVertices=new HashMap<>();
     }
 
-    public void addEdge(Vertex<V> vertex,Double weight){
+    public void addAdjVertice(Vertex<V> vertex,Double weight){
         adjVertices.put(vertex,weight);
     }
 
     public void removeEdge(Vertex<V> vertex){
         adjVertices.remove(vertex);
-
     }
 
     public V getValue() {
@@ -27,6 +27,16 @@ public class Vertex<V>{
 
     public Map<Vertex<V>, Double> getAdjVertices() {
         return adjVertices;
+    }
+    @Override
+    public boolean equals(Object o){
+        if (this==o)
+            return true;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Vertex<?> vertex=(Vertex<?>) o;
+        return this.value.equals(vertex.value);
     }
 
 }
