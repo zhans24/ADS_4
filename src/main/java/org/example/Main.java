@@ -1,6 +1,7 @@
 package org.example;
 
 
+import org.example.Search.BFS;
 import org.example.Search.DFS;
 import org.example.Search.Search;
 
@@ -21,8 +22,9 @@ public class Main {
         graph.addEdge(vertex2, vertex3, 3.0);
         graph.addEdge(vertex1, vertex4,4.1 );
 
-        Search<String> dfs=new DFS<>(graph,vertex1);
-        showPathTo(dfs, vertex4);
+        Search<String> bfs=new BFS<>(graph,vertex3);
+        showPathTo(bfs, vertex4);
+
 
     }
 

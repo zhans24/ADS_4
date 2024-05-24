@@ -40,25 +40,7 @@ public class WeightedGraph<V> {
     }
 
 
-    public void bfs(Vertex<V> start){
-        Set<Vertex<V>> isVisited=new HashSet<>();
-        Queue<Vertex<V>> queue=new LinkedList<>();
 
-        isVisited.add(start);
-        queue.add(start);
-
-        while (!queue.isEmpty()){
-            Vertex<V> curr=queue.remove();
-            System.out.print(curr.getValue()+"-> ");
-            for (Vertex<V> vertex:curr.getAdjVertices().keySet()) {
-                if (!isVisited.contains(vertex)) {
-                    isVisited.add(vertex);
-                    queue.add(vertex);
-                }
-            }
-        }
-
-    }
 
 
 

@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class Vertex<V>{
     private V value;
@@ -28,6 +27,7 @@ public class Vertex<V>{
     public Map<Vertex<V>, Double> getAdjVertices() {
         return adjVertices;
     }
+
     @Override
     public boolean equals(Object o){
         if (this==o)
