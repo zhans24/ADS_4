@@ -1,16 +1,16 @@
 package org.example.Search;
 
+import org.example.Graph;
 import org.example.Vertex;
-import org.example.WeightedGraph;
 
 import java.util.Stack;
 
 public class DFS<V> extends Search<V> {
-    public DFS(WeightedGraph<V> graph,Vertex<V> start) {
+    public DFS(Graph<V> graph, Vertex<V> start) {
         dfs(graph, start);
     }
 
-    private void dfs(WeightedGraph<V> graph,Vertex<V> start){
+    private void dfs(Graph<V> graph,Vertex<V> start){
         Stack<Vertex<V>> stack=new Stack<>();
 
         isVisited.add(start);
