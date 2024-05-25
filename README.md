@@ -6,6 +6,7 @@ The project includes the following classes:
 
 1. `Vertex`: Represents a vertex in a graph
 2. `Edge`: Represents an edge connecting two vertices in a graph with a weight
-3. `WeightedGraph`: Represents a weighted graph data structure
-4. `Djikstra`: Implements Dijkstra's algorithm to find the shortest path in a weighted graph
-5. `Search`: Provides a common structure for search algorithms and includes functionality for path reconstruction
+3. `Graph`: Represents an unweighted graph data structure
+4. `WeightedGraph`: Represents a weighted graph data structure
+5. `Djikstra`: Implements Dijkstra's algorithm to find the shortest path in a weighted graph
+6. `Search`: Provides a common structure for search algorithms and includes functionality for path reconstruction
