@@ -24,9 +24,23 @@ public class Djikstra<V> extends Search<V>{
         putDistances(graph);
         distances.put(start, 0.0);
 
-        Queue<Vertex<V>> queue = new PriorityQueue<>();
+        Queue<Vertex<V>> queue = new LinkedList<>();
         queue.add(start);
 
-        while (!queue.isEmpty()){}
+        while (!queue.isEmpty()){
+            Vertex<V> curr=queue.remove();
+            isVisited.add(curr);
+            Map<Vertex<V>,Double> edges=curr.getAdjVertices();
+
+            for (Vertex<V> vertex:edges.keySet()) {
+                Double distance= (edges.get(vertex) + edges.get(vertex));
+
+                if (distance<distances.get(vertex)){
+                    distances.put(vertex, distance);
+                    queue.add(vertex);
+                    parentVertices.put(vertex,curr);
+                }
+            }
+        }
     }
 }
