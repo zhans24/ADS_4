@@ -1,4 +1,4 @@
-![image](https://github.com/zhans24/ADS_4/assets/154365039/a9039bef-d200-41de-a532-1e983c5fcdce)
+![image](https://github.com/zhans24/ADS_4/assets/154365039/6358f84f-0b90-4640-b24a-38a95b40468a)
 # Graph Search Algorithms
 
 This project implements graph search algorithms such as Dijkstra's algorithm for finding the shortest path in a weighted graph
