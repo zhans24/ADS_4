@@ -5,13 +5,8 @@ import org.example.Vertex;
 import java.util.*;
 
 public abstract class Search<V> {
-    protected Set<Vertex<V>> isVisited;
-    protected Map<Vertex<V>,Vertex<V>> parentVertices;
-
-    public Search(){
-        this.isVisited=new HashSet<>();
-        this.parentVertices=new HashMap<>();
-    }
+    protected Set<Vertex<V>> isVisited=new HashSet<>();;
+    protected Map<Vertex<V>,Vertex<V>> parentVertices=new HashMap<>();
 
     public Iterable<Vertex<V>> pathTo(Vertex<V> start) {
         if (!isVisited.contains(start))

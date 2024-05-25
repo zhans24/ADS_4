@@ -3,15 +3,11 @@ package org.example.Search;
 import org.example.Vertex;
 import org.example.WeightedGraph;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Set;
 
 public class BFS<V> extends Search<V>{
     public BFS(WeightedGraph<V> graph, Vertex<V> start) {
-        super();
-        
         bfs(graph,start);
     }
 

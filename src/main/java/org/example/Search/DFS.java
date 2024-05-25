@@ -3,13 +3,10 @@ package org.example.Search;
 import org.example.Vertex;
 import org.example.WeightedGraph;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class DFS<V> extends Search<V> {
     public DFS(WeightedGraph<V> graph,Vertex<V> start) {
-        super();
-
         dfs(graph, start);
     }
 

@@ -1,8 +1,10 @@
 package org.example;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
-
+@Getter
 public class Vertex<V>{
     private V value;
     private Map<Vertex<V>,Double> adjVertices;
@@ -18,14 +20,6 @@ public class Vertex<V>{
 
     public void removeEdge(Vertex<V> vertex){
         adjVertices.remove(vertex);
-    }
-
-    public V getValue() {
-        return value;
-    }
-
-    public Map<Vertex<V>, Double> getAdjVertices() {
-        return adjVertices;
     }
 
     @Override

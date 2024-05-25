@@ -39,12 +39,6 @@ public class WeightedGraph<V> {
         vertex2.removeEdge(vertex1);
     }
 
-
-
-
-
-
-
     @Override
     public String toString() {
         StringBuilder sb=new StringBuilder();
