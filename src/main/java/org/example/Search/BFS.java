@@ -1,6 +1,6 @@
 package org.example.Search;
 
-import org.example.Graph;
+import org.example.Graphs.Graph;
 import org.example.Vertex;
 
 import java.util.LinkedList;
@@ -11,6 +11,12 @@ public class BFS<V> extends Search<V>{
         bfs(graph,start);
     }
 
+    /**
+     * Performs breadth-first search starting from the given vertex in the graph
+     *
+     * @param graph The graph to perform BFS on
+     * @param start The starting vertex for BFS
+     */
     private void bfs(Graph<V> graph,Vertex<V> start){
         Queue<Vertex<V>> queue=new LinkedList<>();
 

@@ -1,6 +1,6 @@
 package org.example.Search;
 
-import org.example.Graph;
+import org.example.Graphs.Graph;
 import org.example.Vertex;
 
 import java.util.Stack;
@@ -10,6 +10,12 @@ public class DFS<V> extends Search<V> {
         dfs(graph, start);
     }
 
+    /**
+     * Performs depth-first search starting from the given vertex in the graph
+     *
+     * @param graph The graph to perform DFS on
+     * @param start The starting vertex for DFS
+     */
     private void dfs(Graph<V> graph,Vertex<V> start){
         Stack<Vertex<V>> stack=new Stack<>();
 

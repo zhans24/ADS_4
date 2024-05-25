@@ -1,6 +1,8 @@
 package org.example;
 
 
+import org.example.Graphs.Graph;
+import org.example.Graphs.WeightedGraph;
 import org.example.Search.BFS;
 import org.example.Search.DFS;
 import org.example.Search.Djikstra;
@@ -90,4 +92,5 @@ public class Main {
             System.out.print(vertex.getValue()+"->");
         }
     }
+
 }
