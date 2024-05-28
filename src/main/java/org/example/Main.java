@@ -31,13 +31,13 @@ public class Main {
 
         System.out.println("DFS:");
         Search<String> dfs = new DFS<>(graph, Almaty);
-        showPathTo(dfs, Atyrau);
+        showPathTo(dfs, Kyzylorda);
 
         System.out.println("\n--------------------------------");
 
         System.out.println("BFS:");
-        Search<String> bfs = new BFS<>(graph, Shymkent);
-        showPathTo(bfs, Astana);
+        Search<String> bfs = new BFS<>(graph, Almaty);
+        showPathTo(bfs, Kyzylorda);
     }
 
     public static void fillWithoutWeights(Graph<String> graph) {

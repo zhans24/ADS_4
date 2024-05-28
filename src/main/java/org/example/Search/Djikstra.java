@@ -8,6 +8,7 @@ import java.util.*;
 public class Djikstra<V> extends Search<V>{
 
     private Map<Vertex<V>,Double> distances;
+    
     public Djikstra(WeightedGraph<V> graph, Vertex<V> start){
         distances=new HashMap<>();
 
